@@ -36,11 +36,15 @@ function love.load()
 
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
-        resizable = false,
+        resizable = true,
         vsync = true
     })
 
     gameState = 'start'
+end
+
+function resize(w, h)
+    push:resize(w, h)
 end
 
 function love.update(dt)
